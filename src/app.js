@@ -13,7 +13,7 @@ server.get('/products', async (req,res)=>{
         if (!isNaN(limit)) { // Verificamos si es un numero, devolvera true
             let result;
             if(limit > list.length){
-                res.send("Error, Limite excedido")
+                res.send(`<h1 style="color:red;text-align:center">Limite Excedido</h1>`)
             }else{
                 result = list.slice(0, limit);
                 res.send(result)
@@ -36,7 +36,7 @@ server.get('/products/:productId', async (req,res)=>{
 
             res.send(result)
         } else{
-            res.send(`<h1>Producto No encontrado</h1>`)
+            res.send(`<h1 style="color:red;text-align:center">Producto No encontrado</h1>`)
         }
      
     } catch (error) {
