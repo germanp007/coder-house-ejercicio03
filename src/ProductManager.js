@@ -33,7 +33,7 @@ export class ProductManager {
           this.filePath,
           JSON.stringify(productData, null, 2)
         );
-        console.log("Product Added");
+        console.log("Product Added correctly");
       }
     } catch (error) {
       console.log(error.message);
