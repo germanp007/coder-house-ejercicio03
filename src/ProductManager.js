@@ -53,9 +53,9 @@ export class ProductManager {
       }
       productList[productIndex] = productUpdated;
       await fs.promises.writeFile(this.filePath, JSON.stringify(productList, null,2))
-      console.log('Product Updated')
+      console.log('Producto actualizado con exito')
     } catch (error) {
-      console.log(error)
+      console.log('Hubo un error al actualizar el producto')
     }
   }
   async getProducts() {
