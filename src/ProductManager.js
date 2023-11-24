@@ -67,7 +67,7 @@ export class ProductManager {
         return productList;
       }
     } catch (error) {
-      console.log(error);
+      console.log('Hubo un error al obtener el listado de Productos');
     }
   }
   async deleteProduct(id){
@@ -79,7 +79,7 @@ export class ProductManager {
       await fs.promises.writeFile(this.filePath, JSON.stringify(productList, null, 2))
       console.log('Product deleted')
     } catch (error) {
-      console.log(error)
+      console.log('El producto no pudo ser borrado')
     }
     
 
