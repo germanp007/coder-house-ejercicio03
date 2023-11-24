@@ -43,7 +43,7 @@ export class ProductManager {
     try {
       const productList = await this.getProducts();
       const productIndex = productList.findIndex(ele => ele.id === id)
-      if(productIndex === -1){
+      if(productIndex < 0){
         console.log(`Product with ID ${id} not found`)
       }
       const productUpdated = {
