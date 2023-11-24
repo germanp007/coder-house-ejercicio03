@@ -92,7 +92,7 @@ export class ProductManager {
         if (product) {
           return product;
         } else {
-          throw new Error("Product not found");
+          throw new Error("El producto no fue encontrado");
         }
       }
     } catch (error) {
